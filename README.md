@@ -1,6 +1,6 @@
 # ⚡ Scalefund Trading Engine Backend
 
-> A high-performance backend for proprietary trading firms — real-time account control, live market trading, and smart risk automation.
+> A high-performance backend for proprietary trading firms real-time account control, live market trading, and smart risk automation.
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![License](https://img.shields.io/github/license/your-org/trading-engine)
