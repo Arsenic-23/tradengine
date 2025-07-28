@@ -1,59 +1,29 @@
-# 🚀 **Scalefund Trading Engine Backend**
+# ⚡ Scalefund Trading Engine Backend
 
-## ✨ **Project Overview**
-This repository houses the **core backend services** for the Scalefund proprietary trading engine. It's designed for **high-performance, low-latency** trading operations, providing the backbone for market data processing, order management, portfolio tracking, and real-time risk assessment. Built with **NestJS and TypeScript**, it leverages a robust, modular architecture suitable for demanding financial environments.
+> A high-performance backend for proprietary trading firms — real-time account control, live market trading, and smart risk automation.
 
-## 🛠️ **Key Technologies**
-* **Framework**: **NestJS** (Node.js)
-* **Language**: **TypeScript**
-* **Database**: (Assumed MongoDB - based on `.schema.ts` files)
-* **Real-time**: **WebSockets** (for market data)
-* **Authentication**: **JWT**, Local Strategy
-* **Containerization**: **Docker**
+![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![License](https://img.shields.io/github/license/your-org/trading-engine)
+![Made With](https://img.shields.io/badge/Made%20with-❤️%20and%20Python-blueviolet)
+![Status](https://img.shields.io/badge/status-beta-orange)
 
-## 📁 **Core Modules & Functionality**
-# This section provides a quick, high-level overview of the most important modules.
-# It's crucial for understanding the project's capabilities at a glance.
+---
 
-* **`auth/`**: User authentication, authorization, and security.
-* **`market/`**: Real-time market data ingestion and distribution via WebSockets.
-* **`trades/`**: Order placement, management, and historical trade data.
-* **`portfolio/`**: Real-time position and P&L tracking.
-* **`risk/`**: Pre-trade and post-trade risk management logic.
-* **`users/`**: Core user profiles and management.
-* **`kyc/`**: User KYC documentation handling.
-* **`admin/`**: Backend administrative tools and user flagging.
-* **`cron/`**: Scheduled tasks for automated processes (e.g., account resets).
-* **`config/`**: Centralized application configuration.
+## 🚀 Features
 
-## 🏁 **Getting Started**
+- 🔐 **Account Management** – Create & manage demo accounts on the fly
+- 📊 **Live Trading Feed** – Real-time trade data tracking and visualization
+- 🧠 **Rule Enforcement** – Automated checks for drawdown, targets, and violations
+- ⚡ **Fast Execution** – Low-latency trade processing using async APIs
+- 📤 **Smart Notifications** – Email + Telegram alerts on trades, wins, and violations
+- 📈 **Performance Dashboard** – For users to track trades, equity, and progress
 
-### **Prerequisites**
-Ensure **Node.js (v18+ LTS)**, **npm**, and **Docker** (or local **MongoDB**) are installed.
+---
 
-### **Installation & Setup**
-1.  **Clone the repository**:
-    ```bash
-    cd Scalefund-backend
-    ```
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-3.  **Configure Environment**: Copy `.env.example` to `.env` and fill in your specific values:
-    ```bash
-    # .env example (snippet)
-    PORT=3000
-    DATABASE_URL=mongodb://localhost:27017/scalefund
-    JWT_SECRET=YOUR_SUPER_SECURE_JWT_KEY_HERE # **CRITICAL: Generate a strong, unique key!**
-    MARKET_DATA_API_KEY=your_exchange_api_key
-    # ... other configurations for email, etc.
-    ```
-    # Emphasize the importance of `JWT_SECRET` for security.
+## 🔧 Tech Stack
 
-### **Running the Application**
-
-#### **Local Development (with Docker Compose)**
-This is the recommended way for local development as it sets up the database.
 ```bash
-docker-compose up --build
+🧠 Backend      : FastAPI / Flask / Node.js (selectable)
+⚙️  Database     : PostgreSQL / MongoDB
+📡 Trading APIs : MetaTrader 5, Alpaca, Custom Simulated Engine
+💬 Notifications: SMTP / Telegram Bot API
