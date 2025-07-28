@@ -59,10 +59,9 @@ Scalefund-backend/
 ├── tsconfig.json
 ├── nest-cli.json
 └── Dockerfile
-
 ---
 
-# 🧠 Techstack
+## 🧠 Techstack
 
 📦 Framework   : NestJS
 
