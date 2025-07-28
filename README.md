@@ -27,3 +27,16 @@
 ⚙️  Database     : PostgreSQL / MongoDB
 📡 Trading APIs : MetaTrader 5, Alpaca, Custom Simulated Engine
 💬 Notifications: SMTP / Telegram Bot API
+
+trading-engine/
+│
+├── app/
+│   ├── api/           # Routes and endpoints
+│   ├── core/          # Logic for trading, validation, auth
+│   ├── models/        # Pydantic and DB models
+│   └── utils/         # Helper functions
+│
+├── tests/             # Test cases
+├── main.py            # FastAPI entry point
+├── requirements.txt
+└── README.md
