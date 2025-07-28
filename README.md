@@ -34,7 +34,6 @@ Ensure **Node.js (v18+ LTS)**, **npm**, and **Docker** (or local **MongoDB**) ar
 ### **Installation & Setup**
 1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/your-organization/Scalefund-backend.git](https://github.com/your-organization/Scalefund-backend.git)
     cd Scalefund-backend
     ```
 2.  **Install dependencies**:
