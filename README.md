@@ -57,3 +57,14 @@ Scalefund-backend/
 ├── tsconfig.json
 ├── nest-cli.json
 └── Dockerfile
+
+## 🧠 Techstack 
+
+📦 Framework   : NestJS
+🧬 Language    : TypeScript
+🗄️ Database    : MongoDB / Mongoose
+🔐 Auth        : JWT + Role Guards
+📡 Realtime    : WebSocket Gateway
+📊 Monitoring  : Custom Analytics + Leaderboard
+⏱️ Scheduling  : CRON tasks with NestJS Schedule
+📧 Emails      : Handlebars templating + SMTP
