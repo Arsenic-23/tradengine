@@ -58,7 +58,7 @@ Scalefund-backend/
 ├── nest-cli.json
 └── Dockerfile
 
-___
+---
 
 ## 🧠 Techstack 
 
