@@ -1,6 +1,6 @@
 # ⚡ Scalefund Trading Engine Backend
 
-> 🏦 A full-stack, modular, and scalable trading engine backend for proprietary trading firms — built with NestJS, featuring real-time market handling, smart account control, and automated rule enforcement.
+> 🏦 A full-stack, modular, and scalable trading engine backend for proprietary trading firms built with NestJS, featuring real-time market handling, smart account control, and automated rule enforcement.
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Tech](https://img.shields.io/badge/stack-NestJS%20%7C%20MongoDB%20%7C%20WebSocket-blueviolet)
