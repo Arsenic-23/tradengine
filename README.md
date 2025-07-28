@@ -1,42 +1,59 @@
 # ⚡ Scalefund Trading Engine Backend
 
-> A high-performance backend for proprietary trading firms real-time account control, live market trading, and smart risk automation.
+> 🏦 A full-stack, modular, and scalable trading engine backend for proprietary trading firms — built with NestJS, featuring real-time market handling, smart account control, and automated rule enforcement.
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
-![License](https://img.shields.io/github/license/your-org/trading-engine)
-![Made With](https://img.shields.io/badge/Made%20with-❤️%20and%20Python-blueviolet)
-![Status](https://img.shields.io/badge/status-beta-orange)
+![Tech](https://img.shields.io/badge/stack-NestJS%20%7C%20MongoDB%20%7C%20WebSocket-blueviolet)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Status](https://img.shields.io/badge/stability-beta-orange)
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- 🔐 **Account Management** – Create & manage demo accounts on the fly
-- 📊 **Live Trading Feed** – Real-time trade data tracking and visualization
-- 🧠 **Rule Enforcement** – Automated checks for drawdown, targets, and violations
-- ⚡ **Fast Execution** – Low-latency trade processing using async APIs
-- 📤 **Smart Notifications** – Email + Telegram alerts on trades, wins, and violations
-- 📈 **Performance Dashboard** – For users to track trades, equity, and progress
+- 🧠 **Modular Architecture** – Built with NestJS for maintainability and scalability
+- 📊 **Real-Time Trading** – WebSocket integration for market subscriptions and updates
+- 🔐 **Authentication & Roles** – JWT + Guard-based access control
+- 🛡️ **Risk Engine** – Rule-based account validation & violation auto-handling
+- 📬 **Email Notification System** – Custom templates for key user events
+- 🏆 **Leaderboard & Analytics** – Track performance, rank users, and monitor behavior
+- 🔁 **Scheduled Cron Jobs** – For tasks like account resets and position closure
+- 📦 **Docker-Ready** – Smooth containerized deployment
 
 ---
 
-## 🔧 Tech Stack
+## 🗂️ Folder Structure
 
 ```bash
-🧠 Backend      : FastAPI / Flask / Node.js (selectable)
-⚙️  Database     : PostgreSQL / MongoDB
-📡 Trading APIs : MetaTrader 5, Alpaca, Custom Simulated Engine
-💬 Notifications: SMTP / Telegram Bot API
-
-trading-engine/
+Scalefund-backend/
 │
-├── app/
-│   ├── api/           # Routes and endpoints
-│   ├── core/          # Logic for trading, validation, auth
-│   ├── models/        # Pydantic and DB models
-│   └── utils/         # Helper functions
+├── src/
+│   ├── app.module.ts             # Root module
+│   ├── main.ts                   # Entry point
+│   ├── config/                   # Environment and API config
+│   ├── constants/                # Roles, symbols, app-wide constants
+│   ├── common/                   # Decorators, guards, filters, interceptors
+│   ├── auth/                     # Auth logic, strategies, DTOs
+│   ├── users/                    # User profile management
+│   ├── kyc/                      # KYC handling
+│   ├── market/                   # Live market feed and WebSocket gateway
+│   ├── trades/                   # Order placement, closure, history
+│   ├── portfolio/                # Account & portfolio tracking
+│   ├── leaderboard/              # Ranking and competition logic
+│   ├── notifications/            # Email, alerts
+│   ├── risk/                     # Risk rules and auto-blocking
+│   ├── admin/                    # Admin tools and analytics
+│   ├── logger/                   # Request logging and middleware
+│   ├── cron/                     # Scheduled tasks (reset, close)
+│   ├── analytics/                # User performance analysis
+│   └── email/                    # Templates + Email service
 │
-├── tests/             # Test cases
-├── main.py            # FastAPI entry point
-├── requirements.txt
-└── README.md
+├── test/                         # E2E tests
+├── .env
+├── .env.example
+├── .gitignore
+├── README.md
+├── package.json
+├── tsconfig.json
+├── nest-cli.json
+└── Dockerfile
