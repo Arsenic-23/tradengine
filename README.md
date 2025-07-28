@@ -1,4 +1,4 @@
-# ⚡ Scalefund Trading Engine Backend
+# ⚡ Scalefund Trading Engine
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
