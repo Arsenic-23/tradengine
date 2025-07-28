@@ -1,5 +1,7 @@
 # ⚡ Scalefund Trading Engine Backend
 
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
 > 🏦 A full-stack, modular, and scalable trading engine backend for proprietary trading firms built with NestJS, featuring real-time market handling, smart account control, and automated rule enforcement.
 
 <p align="left">
