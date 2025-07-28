@@ -60,7 +60,7 @@ Scalefund-backend/
 
 ---
 
-## 🧠 Techstack 
+## 🧠 Techstack
 
 📦 Framework   : NestJS
 🧬 Language    : TypeScript
