@@ -7,7 +7,7 @@
 <p align="left">
   <img src="https://img.shields.io/badge/build-passing-brightgreen.svg" />
   <img src="https://img.shields.io/badge/stack-NestJS%20%7C%20MongoDB%20%7C%20WebSocket-blueviolet" />
-  <img src="https://img.shields.io/badge/license-MIT-lightgrey" />
+  <img src="https://img.shields.io/badge/license-MIT-lightred" />
   <img src="https://img.shields.io/badge/stability-beta-orange" />
 </p>
 
