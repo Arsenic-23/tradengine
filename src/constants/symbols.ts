@@ -1,1 +1,17 @@
-
+export const MARKET_SYMBOLS = [
+  'BTCUSD',
+  'ETHUSD',
+  'XAUUSD',
+  'EURUSD',
+  'GBPUSD',
+  'USDJPY',
+  'USDCAD',
+  'USDCHF',
+  'AUDUSD',
+  'NZDUSD',
+  'SPX500',
+  'NAS100',
+  'DOW30',
+  'OILWTI',
+  'OILBRENT',
+];
