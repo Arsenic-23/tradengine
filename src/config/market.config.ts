@@ -1,6 +1,6 @@
-export const marketConfig = () => ({
-  market: {
-    websocketUrl: process.env.MARKET_WEBSOCKET_URL,
-    pollingInterval: parseInt(process.env.MARKET_POLLING_INTERVAL, 10) || 10000,
-  },
-});
+import { registerAs } from '@nestjs/config';
+
+export default registerAs('market', () => ({
+  apiKey: process.env.MARKET_API_KEY || '',
+  baseUrl: process.env.MARKET_BASE_URL || 'https://api.market.example.com',
+}));
