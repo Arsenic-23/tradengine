@@ -1,4 +1,3 @@
-
 export class AdminAnalyticsDto {
   totalUsers: number;
   totalTrades: number;
