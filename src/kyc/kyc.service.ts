@@ -1,36 +1,39 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types } from 'mongoose';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Kyc, KycDocument } from './kyc.schema';
+import { Model } from 'mongoose';
+import { UploadKycDto } from './dto/upload-kyc.dto';
 
-export type KycDocument = Kyc & Document;
+@Injectable()
+export class KycService {
+  constructor(@InjectModel(Kyc.name) private kycModel: Model<KycDocument>) {}
 
-@Schema({ timestamps: true })
-export class Kyc {
-  @Prop({ type: Types.ObjectId, ref: 'User', required: true })
-  user: Types.ObjectId;
+  async uploadKyc(userId: string, dto: UploadKycDto) {
+    const existing = await this.kycModel.findOne({ user: userId });
+    if (existing) {
+      await this.kycModel.updateOne({ user: userId }, { ...dto, status: 'pending' });
+      return { message: 'KYC updated and submitted for verification.' };
+    }
+    const kyc = new this.kycModel({ ...dto, user: userId, status: 'pending' });
+    await kyc.save();
+    return { message: 'KYC uploaded and submitted for verification.' };
+  }
 
-  @Prop({ required: true })
-  fullName: string;
+  async getUserKyc(userId: string) {
+    const kyc = await this.kycModel.findOne({ user: userId });
+    if (!kyc) throw new NotFoundException('No KYC found.');
+    return kyc;
+  }
 
-  @Prop({ required: true })
-  dob: string;
+  async getAllKycs() {
+    return await this.kycModel.find().populate('user');
+  }
 
-  @Prop({ required: true })
-  address: string;
-
-  @Prop({ required: true })
-  idType: string;
-
-  @Prop({ required: true })
-  idNumber: string;
-
-  @Prop({ required: true })
-  frontImage: string;
-
-  @Prop({ required: true })
-  backImage: string;
-
-  @Prop({ enum: ['pending', 'verified', 'rejected'], default: 'pending' })
-  status: string;
+  async verifyKyc(id: string) {
+    const kyc = await this.kycModel.findById(id);
+    if (!kyc) throw new NotFoundException('KYC record not found');
+    kyc.status = 'verified';
+    await kyc.save();
+    return { message: 'KYC verified successfully.' };
+  }
 }
-
-export const KycSchema = SchemaFactory.createForClass(Kyc);
