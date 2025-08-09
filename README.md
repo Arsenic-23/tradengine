@@ -79,3 +79,9 @@ Scalefund-backend/
 ⏱️ Scheduling  : CRON tasks with NestJS Schedule
 
 📧 Emails      : Handlebars templating + SMTP
+
+
+Off:
+smitmaury001@gmail.com
+
+smitmaurya&630
